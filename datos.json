@@ -1,19 +1,31 @@
 {
-    "clasificacion": [
-      { "nombre": "Team Aqua", "tipo": "Agua", "victorias": 5, "derrotas": 1, "puntos": 15 },
-      { "nombre": "Team Flare", "tipo": "Fuego", "victorias": 4, "derrotas": 2, "puntos": 12 }
+  "liga": [
+    { "nombre": "Raul", "puntos": 12, "victorias": 4, "derrotas": 1 },
+    { "nombre": "Pablo", "puntos": 9, "victorias": 3, "derrotas": 2 },
+    { "nombre": "Laura", "puntos": 6, "victorias": 2, "derrotas": 3 }
+  ],
+  "jornadas": [
+    [
+      { "local": "Raul", "visitante": "Laura", "resultado": "2-1" },
+      { "local": "Pablo", "visitante": "Raul", "resultado": "1-2" }
     ],
-    "torneo": [
-      { "equipo1": "Team Aqua", "equipo2": "Team Flare", "resultado": "2-1" },
-      { "equipo1": "Team Leaf", "equipo2": "Team Rock", "resultado": null }
+    [
+      { "local": "Laura", "visitante": "Pablo", "resultado": "0-2" }
+    ]
+  ],
+  "torneo": {
+    "cuartos": [
+      ["Raul", "Laura"],
+      ["Pablo", "Carlos"],
+      ["Marta", "Lucía"],
+      ["Dani", "Sara"]
     ],
-    "jornadas": [
-      {
-        "partidos": [
-          { "equipo1": "Team Aqua", "equipo2": "Team Flare", "resultado": "2-1" },
-          { "equipo1": "Team Rock", "equipo2": "Team Leaf", "resultado": "0-2" }
-        ]
-      }
+    "semis": [
+      ["Raul", "Pablo"],
+      ["Marta", "Dani"]
+    ],
+    "final": [
+      ["Raul", "Marta"]
     ]
   }
-  
+}
