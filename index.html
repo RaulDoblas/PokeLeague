@@ -2,39 +2,51 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PokeLeague</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .bracket {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .round {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .match {
+      background-color: #1f2937; /* bg-gray-800 */
+      padding: 1rem;
+      border-radius: 0.5rem;
+      color: white;
+      text-align: center;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    .round-title {
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #cbd5e1; /* text-slate-300 */
+    }
+  </style>
 </head>
-<body class="bg-gradient-to-b from-gray-900 to-gray-800 text-white min-h-screen">
+<body class="bg-gray-900 text-white min-h-screen">
 
-  <header class="text-center py-6">
-    <h1 class="text-4xl font-bold text-yellow-400">PokeLeague</h1>
-    <nav class="mt-4 space-x-4">
-      <a href="index.html" class="hover:underline">Inicio</a>
-      <a href="jornadas.html" class="hover:underline">Jornadas</a>
-      <a href="reglas.html" class="hover:underline">Reglas</a>
-    </nav>
-  </header>
+  <header class="p-6 text-center text-3xl font-bold text-yellow-400">🏆 PokeLeague Monotype</header>
 
-  <main class="max-w-7xl mx-auto p-4">
+  <main class="max-w-6xl mx-auto px-4 py-8">
 
-    <!-- LIGA -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold mb-4 border-b pb-2">Clasificación Liga</h2>
-      <div id="liga" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></div>
-    </section>
-
-    <!-- TORNEO -->
+    <!-- Sección del Torneo -->
     <section>
-      <h2 class="text-2xl font-semibold mb-4 border-b pb-2">Torneo Final (Brackets)</h2>
-      <div id="bracket" class="overflow-auto">
-        <div class="flex justify-center">
-          <div class="bracket flex gap-12 text-center text-sm">
-            <!-- Fases se llenarán dinámicamente -->
-          </div>
-        </div>
-      </div>
+      <h2 class="text-2xl font-semibold mb-4 text-center">Torneo Final</h2>
+      <div id="brackets" class="bracket"></div>
     </section>
 
   </main>
@@ -43,35 +55,36 @@
     fetch("datos.json")
       .then(res => res.json())
       .then(data => {
-        const liga = document.getElementById("liga");
-        data.liga.forEach(equipo => {
-          liga.innerHTML += `
-            <div class="bg-gray-700 rounded-xl shadow-lg p-4 border border-yellow-500">
-              <h3 class="text-lg font-bold text-yellow-300">${equipo.nombre}</h3>
-              <p>Puntos: ${equipo.puntos}</p>
-              <p>Victorias: ${equipo.victorias} | Derrotas: ${equipo.derrotas}</p>
-            </div>`;
-        });
+        const fases = ["cuartos", "semis", "final"];
+        const nombres = {
+          cuartos: "Cuartos de Final",
+          semis: "Semifinales",
+          final: "Final"
+        };
 
-        const fases = ['cuartos', 'semis', 'final'];
-        const bracket = document.querySelector(".bracket");
+        const bracketsDiv = document.getElementById("brackets");
 
         fases.forEach(fase => {
+          const emparejamientos = data.torneo?.[fase];
+          if (!Array.isArray(emparejamientos)) return;
+
           const columna = document.createElement("div");
-          columna.classList.add("flex", "flex-col", "gap-6");
-          columna.innerHTML = `<h4 class="text-lg font-bold mb-2 capitalize">${fase}</h4>`;
-          data.torneo[fase].forEach(match => {
-            columna.innerHTML += `
-              <div class="bg-gray-700 p-3 rounded-xl border-l-4 border-yellow-400 shadow-md">
-                <p>${match[0]}</p>
-                <p class="font-bold text-yellow-300">vs</p>
-                <p>${match[1]}</p>
-              </div>`;
+          columna.className = "round";
+          columna.innerHTML = `<div class="round-title">${nombres[fase]}</div>`;
+
+          emparejamientos.forEach(([p1, p2]) => {
+            const match = document.createElement("div");
+            match.className = "match";
+            match.innerHTML = `<span>${p1} vs ${p2}</span>`;
+            columna.appendChild(match);
           });
-          bracket.appendChild(columna);
+
+          bracketsDiv.appendChild(columna);
         });
+      })
+      .catch(err => {
+        console.error("Error cargando datos del torneo:", err);
       });
   </script>
-
 </body>
 </html>
