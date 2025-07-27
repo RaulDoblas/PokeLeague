@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jornadas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <nav class="bg-blue-700 text-white p-4 flex justify-center space-x-6">
+    <a href="index.html">Inicio</a>
+    <a href="jornadas.html">Jornadas</a>
+    <a href="reglas.html">Reglas</a>
+  </nav>
+
+  <section class="p-6">
+    <h2 class="text-2xl font-bold mb-4">Jornadas</h2>
+    <div id="lista-jornadas" class="space-y-4"></div>
+  </section>
+
+  <script>
+    fetch('datos.json')
+      .then(r => r.json())
+      .then(data => {
+        const jornadasDiv = document.getElementById('lista-jornadas');
+        data.jornadas.forEach((jornada, i) => {
+          let html = `<div class="bg-white border rounded p-4 shadow">
+            <h4 class="font-bold mb-2">Jornada ${i + 1}</h4>
+            <ul class="space-y-1">`;
+          jornada.partidos.forEach(p => {
+            html += `<li>${p.equipo1} vs ${p.equipo2} - Resultado: ${p.resultado || '-'}</li>`;
+          });
+          html += `</ul></div>`;
+          jornadasDiv.innerHTML += html;
+        });
+      });
+  </script>
+</body>
+</html>
