@@ -1,83 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liga Pokémon Monotype</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PokeLeague</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gradient-to-b from-gray-900 to-gray-800 text-white min-h-screen">
 
-  <!-- NAVBAR -->
-  <nav class="bg-blue-700 text-white p-4 flex justify-center space-x-6">
-    <a href="index.html">Inicio</a>
-    <a href="jornadas.html">Jornadas</a>
-    <a href="reglas.html">Reglas</a>
-  </nav>
-  <!-- SECCIÓN LIGA Y TORNEO -->
-  <section id="liga" class="p-6">
-    <h2 class="text-2xl font-bold mb-4">Clasificación de la Liga</h2>
-    <table class="w-full table-auto border bg-white">
-      <thead class="bg-gray-200">
-        <tr>
-          <th class="border px-2 py-1">Equipo</th>
-          <th class="border px-2 py-1">Tipo</th>
-          <th class="border px-2 py-1">Victorias</th>
-          <th class="border px-2 py-1">Derrotas</th>
-          <th class="border px-2 py-1">Puntos</th>
-        </tr>
-      </thead>
-      <tbody id="tabla-liga"></tbody>
-    </table>
+  <header class="text-center py-6">
+    <h1 class="text-4xl font-bold text-yellow-400">PokeLeague</h1>
+    <nav class="mt-4 space-x-4">
+      <a href="index.html" class="hover:underline">Inicio</a>
+      <a href="jornadas.html" class="hover:underline">Jornadas</a>
+      <a href="reglas.html" class="hover:underline">Reglas</a>
+    </nav>
+  </header>
 
-    <h2 class="text-2xl font-bold mt-8 mb-4">Torneo Final (Top 8)</h2>
-    <div id="torneo" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
-  </section>
+  <main class="max-w-7xl mx-auto p-4">
 
+    <!-- LIGA -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4 border-b pb-2">Clasificación Liga</h2>
+      <div id="liga" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></div>
+    </section>
 
-  <!-- SCRIPT DE CARGA DINÁMICA -->
+    <!-- TORNEO -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4 border-b pb-2">Torneo Final (Brackets)</h2>
+      <div id="bracket" class="overflow-auto">
+        <div class="flex justify-center">
+          <div class="bracket flex gap-12 text-center text-sm">
+            <!-- Fases se llenarán dinámicamente -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
   <script>
-    async function cargarDatos() {
-      const data = await fetch('datos.json').then(res => res.json());
-
-      // Tabla de clasificación
-      const tabla = document.getElementById('tabla-liga');
-      data.clasificacion.forEach(equipo => {
-        const fila = `<tr>
-          <td class="border px-2 py-1">${equipo.nombre}</td>
-          <td class="border px-2 py-1">${equipo.tipo}</td>
-          <td class="border px-2 py-1">${equipo.victorias}</td>
-          <td class="border px-2 py-1">${equipo.derrotas}</td>
-          <td class="border px-2 py-1">${equipo.puntos}</td>
-        </tr>`;
-        tabla.innerHTML += fila;
-      });
-
-      // Torneo final
-      const torneo = document.getElementById('torneo');
-      data.torneo.forEach((duelo, i) => {
-        torneo.innerHTML += `<div class="bg-white border p-4 rounded shadow">
-          <h3 class="font-semibold mb-2">Ronda ${Math.floor(i / 4) + 1}</h3>
-          <p>${duelo.equipo1} vs ${duelo.equipo2}</p>
-          <p class="text-sm text-gray-500">Resultado: ${duelo.resultado || '-'}</p>
-        </div>`;
-      });
-
-      // Jornadas
-      const jornadasDiv = document.getElementById('lista-jornadas');
-      data.jornadas.forEach((jornada, i) => {
-        let html = `<div class="bg-white border rounded p-4 shadow">
-          <h4 class="font-bold mb-2">Jornada ${i + 1}</h4>
-          <ul class="space-y-1">`;
-        jornada.partidos.forEach(p => {
-          html += `<li>${p.equipo1} vs ${p.equipo2} - Resultado: ${p.resultado || '-'}</li>`;
+    fetch("datos.json")
+      .then(res => res.json())
+      .then(data => {
+        const liga = document.getElementById("liga");
+        data.liga.forEach(equipo => {
+          liga.innerHTML += `
+            <div class="bg-gray-700 rounded-xl shadow-lg p-4 border border-yellow-500">
+              <h3 class="text-lg font-bold text-yellow-300">${equipo.nombre}</h3>
+              <p>Puntos: ${equipo.puntos}</p>
+              <p>Victorias: ${equipo.victorias} | Derrotas: ${equipo.derrotas}</p>
+            </div>`;
         });
-        html += `</ul></div>`;
-        jornadasDiv.innerHTML += html;
-      });
-    }
 
-    cargarDatos();
+        const fases = ['cuartos', 'semis', 'final'];
+        const bracket = document.querySelector(".bracket");
+
+        fases.forEach(fase => {
+          const columna = document.createElement("div");
+          columna.classList.add("flex", "flex-col", "gap-6");
+          columna.innerHTML = `<h4 class="text-lg font-bold mb-2 capitalize">${fase}</h4>`;
+          data.torneo[fase].forEach(match => {
+            columna.innerHTML += `
+              <div class="bg-gray-700 p-3 rounded-xl border-l-4 border-yellow-400 shadow-md">
+                <p>${match[0]}</p>
+                <p class="font-bold text-yellow-300">vs</p>
+                <p>${match[1]}</p>
+              </div>`;
+          });
+          bracket.appendChild(columna);
+        });
+      });
   </script>
+
 </body>
 </html>
