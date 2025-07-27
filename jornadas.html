@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jornadas</title>
+  <meta charset="UTF-8">
+  <title>Jornadas - PokeLeague</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <nav class="bg-blue-700 text-white p-4 flex justify-center space-x-6">
-    <a href="index.html">Inicio</a>
-    <a href="jornadas.html">Jornadas</a>
-    <a href="reglas.html">Reglas</a>
-  </nav>
+<body class="bg-gray-900 text-white">
 
-  <section class="p-6">
-    <h2 class="text-2xl font-bold mb-4">Jornadas</h2>
-    <div id="lista-jornadas" class="space-y-4"></div>
-  </section>
+  <header class="text-center py-6">
+    <h1 class="text-4xl font-bold text-yellow-400">Jornadas</h1>
+    <nav class="mt-4 space-x-4">
+      <a href="index.html" class="hover:underline">Inicio</a>
+      <a href="jornadas.html" class="hover:underline">Jornadas</a>
+      <a href="reglas.html" class="hover:underline">Reglas</a>
+    </nav>
+  </header>
+
+  <main class="max-w-4xl mx-auto p-4">
+    <div id="jornadas" class="space-y-6"></div>
+  </main>
 
   <script>
-    fetch('datos.json')
-      .then(r => r.json())
+    fetch("datos.json")
+      .then(res => res.json())
       .then(data => {
-        const jornadasDiv = document.getElementById('lista-jornadas');
+        const jornadas = document.getElementById("jornadas");
         data.jornadas.forEach((jornada, i) => {
-          let html = `<div class="bg-white border rounded p-4 shadow">
-            <h4 class="font-bold mb-2">Jornada ${i + 1}</h4>
-            <ul class="space-y-1">`;
-          jornada.partidos.forEach(p => {
-            html += `<li>${p.equipo1} vs ${p.equipo2} - Resultado: ${p.resultado || '-'}</li>`;
+          const card = document.createElement("div");
+          card.className = "bg-gray-800 p-4 rounded-xl border border-yellow-600 shadow-md";
+          card.innerHTML = `<h2 class="text-xl font-bold mb-2 text-yellow-300">Jornada ${i + 1}</h2>`;
+          jornada.forEach(match => {
+            card.innerHTML += `<p>${match.local} ${match.resultado} ${match.visitante}</p>`;
           });
-          html += `</ul></div>`;
-          jornadasDiv.innerHTML += html;
+          jornadas.appendChild(card);
         });
       });
   </script>
+
 </body>
 </html>
