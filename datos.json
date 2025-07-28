@@ -1,13 +1,22 @@
 {
   "liga": [
-    { "nombre": "Raul", "puntos": 12, "victorias": 4, "derrotas": 1 },
-    { "nombre": "Pablo", "puntos": 9, "victorias": 3, "derrotas": 2 },
-    { "nombre": "Laura", "puntos": 6, "victorias": 2, "derrotas": 3 },
-    { "nombre": "Carlos", "puntos": 5, "victorias": 2, "derrotas": 3 },
-    { "nombre": "Marta", "puntos": 4, "victorias": 1, "derrotas": 4 },
-    { "nombre": "Lucía", "puntos": 3, "victorias": 1, "derrotas": 4 },
-    { "nombre": "Dani", "puntos": 2, "victorias": 0, "derrotas": 5 },
-    { "nombre": "Sara", "puntos": 1, "victorias": 0, "derrotas": 5 }
+    { "nombre": "Nieto", "tipo": "Roca", "puntos": 20, "victorias": 6, "derrotas": 1 },
+    { "nombre": "Victor", "tipo": "Fantasma", "puntos": 17, "victorias": 4, "derrotas": 1 },
+    { "nombre": "Pedro", "tipo": "Volador", "puntos": 17, "victorias": 5, "derrotas": 2 },
+    { "nombre": "Rau", "tipo": "Normal", "puntos": 17, "victorias": 5, "derrotas": 2 },
+    { "nombre": "Pablo", "tipo": "Dragón", "puntos": 14, "victorias": 4, "derrotas": 1 },
+    { "nombre": "Fiz", "tipo": "Acero", "puntos": 11, "victorias": 4, "derrotas": 1 },
+    { "nombre": "Felipe", "tipo": "Lucha", "puntos": 11, "victorias": 4, "derrotas": 1 },
+    { "nombre": "Raul", "tipo": "Electrico", "puntos": 10, "victorias": 4, "derrotas": 1 },
+    { "nombre": "Toni", "tipo": "Bicho", "puntos": 10, "victorias": 4, "derrotas": 1 },
+    { "nombre": "Antonio", "tipo": "Planta", "puntos": 9, "victorias": 4, "derrotas": 1 },
+    { "nombre": "Dominik", "tipo": "Hielo", "puntos": 9, "victorias": 4, "derrotas": 1 },
+    { "nombre": "Luis", "tipo": "Agua", "puntos": 9, "victorias": 4, "derrotas": 1 },
+    { "nombre": "Angel", "tipo": "Hada", "puntos": 8, "victorias": 4, "derrotas": 1 },
+    { "nombre": "Xavi", "tipo": "Fuego", "puntos": 6, "victorias": 4, "derrotas": 1 },
+    { "nombre": "Antonio Ire", "tipo": "Siniestro", "puntos": 6, "victorias": 4, "derrotas": 1 },
+    { "nombre": "Dylan", "tipo": "Veneno", "puntos": 5, "victorias": 4, "derrotas": 1 },
+    { "nombre": "Alvaro", "tipo": "Tierra", "puntos": 0, "victorias": 4, "derrotas": 1 },
   ],
   "jornadas": [
     [
@@ -20,17 +29,17 @@
   ],
   "torneo": {
     "cuartos": [
-      ["Raul", "Laura"],
-      ["Pablo", "Carlos"],
-      ["Marta", "Lucía"],
-      ["Dani", "Sara"]
+      ["-", "-"],
+      ["-", "-"],
+      ["-", "-"],
+      ["-", "-"]
     ],
     "semis": [
-      ["Raul", "Pablo"],
-      ["Marta", "Dani"]
+      ["-", "-"],
+      ["-", "-"]
     ],
     "final": [
-      ["Raul", "Marta"]
+      ["-", "-"]
     ]
   }
 }
