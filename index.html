@@ -2,11 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PokeLeague</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PokeLeague - Liga y Torneo</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
-    .active { text-decoration: underline; }
     .bracket {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -47,20 +46,20 @@
 </head>
 <body class="bg-gray-900 text-white min-h-screen">
 
-  <!-- NAVBAR -->
+  <!-- Navbar -->
   <nav class="bg-gray-800 p-4 flex justify-center gap-6 text-yellow-400 font-bold">
-    <a href="#" onclick="mostrarSeccion('liga')" class="active">Liga</a>
-    <a href="#" onclick="mostrarSeccion('jornadas')">Jornadas</a>
-    <a href="#" onclick="mostrarSeccion('torneo')">Torneo</a>
+    <a href="index.html" class="underline">Liga y Torneo</a>
+    <a href="jornadas.html">Jornadas</a>
+    <a href="reglas.html">Reglas</a>
   </nav>
 
   <header class="p-6 text-center text-3xl font-bold text-yellow-400">🏆 PokeLeague Monotype</header>
 
   <main class="max-w-6xl mx-auto px-4 py-4">
 
-    <!-- SECCIÓN: LIGA -->
-    <section id="liga">
-      <h2 class="text-2xl font-semibold mb-4">Clasificación</h2>
+    <!-- SECCIÓN LIGA -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Clasificación Liga</h2>
       <div class="overflow-x-auto card">
         <table class="min-w-full text-center">
           <thead>
@@ -76,14 +75,8 @@
       </div>
     </section>
 
-    <!-- SECCIÓN: JORNADAS -->
-    <section id="jornadas" class="hidden">
-      <h2 class="text-2xl font-semibold mb-4">Jornadas</h2>
-      <div id="contenedor-jornadas"></div>
-    </section>
-
-    <!-- SECCIÓN: TORNEO -->
-    <section id="torneo" class="hidden">
+    <!-- SECCIÓN TORNEO -->
+    <section class="mt-12">
       <h2 class="text-2xl font-semibold mb-4 text-center">Torneo Final</h2>
       <div id="brackets" class="bracket"></div>
     </section>
@@ -91,21 +84,10 @@
   </main>
 
   <script>
-    const secciones = ['liga', 'jornadas', 'torneo'];
-
-    function mostrarSeccion(id) {
-      secciones.forEach(sec => {
-        document.getElementById(sec).classList.toggle('hidden', sec !== id);
-      });
-      document.querySelectorAll("nav a").forEach(a => {
-        a.classList.toggle("active", a.textContent.toLowerCase() === id);
-      });
-    }
-
     fetch("datos.json")
       .then(res => res.json())
       .then(data => {
-        // LIGA
+        // Liga
         const tabla = document.getElementById("tabla-liga");
         data.liga?.forEach(entrenador => {
           const row = document.createElement("tr");
@@ -119,19 +101,7 @@
           tabla.appendChild(row);
         });
 
-        // JORNADAS
-        const contenedorJornadas = document.getElementById("contenedor-jornadas");
-        data.jornadas?.forEach((jornada, index) => {
-          const div = document.createElement("div");
-          div.className = "card";
-          div.innerHTML = `<h3 class="text-xl font-semibold text-yellow-300 mb-2">Jornada ${index + 1}</h3>`;
-          jornada.forEach(partido => {
-            div.innerHTML += `<p>${partido.local} vs ${partido.visitante} - <strong>${partido.resultado}</strong></p>`;
-          });
-          contenedorJornadas.appendChild(div);
-        });
-
-        // TORNEO
+        // Torneo brackets
         const fases = ["cuartos", "semis", "final"];
         const nombres = {
           cuartos: "Cuartos de Final",
