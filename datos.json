@@ -1,20 +1,20 @@
 {
   "liga": [
-  { "nombre": "Nieto", "tipo": "Roca", "puntos": 20, "victorias": 6, "derrotas": 0 },
-  { "nombre": "Victor", "tipo": "Fantasma", "puntos": 17, "victorias": 5, "derrotas": 1 },
-  { "nombre": "Pablo", "tipo": "Dragon", "puntos": 14, "victorias": 4, "derrotas": 2 },
-  { "nombre": "Pedro","tipo": "Volador", "puntos": 12, "victorias": 4, "derrotas": 2 },
-  { "nombre": "Rau","tipo": "Normal", "puntos": 12, "victorias": 4, "derrotas": 2 },
-  { "nombre": "Fiz", "tipo": "Acero","puntos": 11, "victorias": 3, "derrotas": 3 },
-  { "nombre": "Felipe", "tipo": "Lucha","puntos": 11, "victorias": 3, "derrotas": 3 },
-  { "nombre": "Raul","tipo": "Electrico", "puntos": 10, "victorias": 3, "derrotas": 3 },
-  { "nombre": "Toni", "tipo": "Bicho","puntos": 10, "victorias": 3, "derrotas": 3 },
-  { "nombre": "Antonio", "tipo": "Planta","puntos": 9, "victorias": 2, "derrotas": 4 },
+  { "nombre": "Nieto", "tipo": "Roca", "puntos": 20, "victorias": 6, "derrotas": 1 },
+  { "nombre": "Victor", "tipo": "Fantasma", "puntos": 17, "victorias": 5, "derrotas": 2 },
+  { "nombre": "Pablo", "tipo": "Dragon", "puntos": 17, "victorias": 5, "derrotas": 2 },
+  { "nombre": "Pedro","tipo": "Volador", "puntos": 17, "victorias": 5, "derrotas": 2 },
+  { "nombre": "Rau","tipo": "Normal", "puntos": 17, "victorias": 5, "derrotas": 2 },
+  { "nombre": "Fiz", "tipo": "Acero","puntos": 11, "victorias": 3, "derrotas": 4 },
+  { "nombre": "Felipe", "tipo": "Lucha","puntos": 15, "victorias": 4, "derrotas": 3 },
+  { "nombre": "Raul","tipo": "Electrico", "puntos": 13, "victorias": 4, "derrotas": 3 },
+  { "nombre": "Toni", "tipo": "Bicho","puntos": 10, "victorias": 3, "derrotas": 4 },
+  { "nombre": "Antonio", "tipo": "Planta","puntos": 12, "victorias": 3, "derrotas": 4 },
   { "nombre": "Dominik", "tipo": "Hielo","puntos": 9, "victorias": 3, "derrotas": 3 },
   { "nombre": "Xavi", "tipo": "Fuego","puntos": 9, "victorias": 3, "derrotas": 3 },
-  { "nombre": "Javi", "tipo": "Psiquico","puntos": 9, "victorias": 3, "derrotas": 3 },
+  { "nombre": "Javi", "tipo": "Psiquico","puntos": 9, "victorias": 3, "derrotas": 4 },
   { "nombre": "Luis", "tipo": "Agua","puntos": 9, "victorias": 3, "derrotas": 3 },
-  { "nombre": "Angel","tipo": "Hada", "puntos": 8, "victorias": 2, "derrotas": 4 },
+  { "nombre": "Angel","tipo": "Hada", "puntos": 8, "victorias": 2, "derrotas": 5 },
   { "nombre": "Antonio Ire", "tipo": "Siniestro","puntos": 6, "victorias": 2, "derrotas": 4 },
   { "nombre": "Dylan", "tipo": "Veneno","puntos": 5, "victorias": 1, "derrotas": 5 },
   { "nombre": "Alvaro", "tipo": "Tierra","puntos": 0, "victorias": 0, "derrotas": 6 }
@@ -83,7 +83,16 @@
       { "local": "Nieto", "visitante": "Raul", "resultado": "2-0", "puntosGanados": 3 },
       { "local": "Victor", "visitante": "Pablo", "resultado": "2-0", "puntosGanados": 3 },
       { "local": "Rau", "visitante": "Xavi", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Luis", "visitante": "Dylan", "resultado": "2-0", "puntosGanados": 3 }
+      { "local": "Luis", "visitante": "Dylan", "resultado": "2-0", "puntosGanados": 3 },
+      { "local": "Javi", "visitante": "Dominik", "resultado": "2-0", "puntosGanados": 3 }
+    ],
+    [
+      { "local": "Rau", "visitante": "Victor", "resultado": "2-0", "puntosGanados": 5 },
+      { "local": "Pedro", "visitante": "Nieto", "resultado": "2-0", "puntosGanados": 5 },
+      { "local": "Raul", "visitante": "Fiz", "resultado": "2-0", "puntosGanados": 3 },
+      { "local": "Antonio", "visitante": "Angel", "resultado": "2-0", "puntosGanados": 3 },
+      { "local": "Pablo", "visitante": "Javi", "resultado": "2-0", "puntosGanados": 3 },
+      { "local": "Felipe", "visitante": "Toni", "resultado": "2-0", "puntosGanados": 4 }
     ]
   ],
   "torneo": {
