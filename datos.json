@@ -16,7 +16,7 @@
     { "nombre": "Xavi", "tipo": "Fuego", "puntos": 6, "victorias": 4, "derrotas": 1 },
     { "nombre": "Antonio Ire", "tipo": "Siniestro", "puntos": 6, "victorias": 4, "derrotas": 1 },
     { "nombre": "Dylan", "tipo": "Veneno", "puntos": 5, "victorias": 4, "derrotas": 1 },
-    { "nombre": "Alvaro", "tipo": "Tierra", "puntos": 0, "victorias": 4, "derrotas": 1 },
+    { "nombre": "Alvaro", "tipo": "Tierra", "puntos": 0, "victorias": 4, "derrotas": 1 }
   ],
   "jornadas": [
     [
