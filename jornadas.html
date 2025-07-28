@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Jornadas - PokeLeague</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PokeLeague - Jornadas</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    .card {
+      background-color: #1f2937;
+      border-radius: 1rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      color: white;
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white">
+<body class="bg-gray-900 text-white min-h-screen">
 
-  <header class="text-center py-6">
-    <h1 class="text-4xl font-bold text-yellow-400">Jornadas</h1>
-    <nav class="mt-4 space-x-4">
-      <a href="index.html" class="hover:underline">Inicio</a>
-      <a href="jornadas.html" class="hover:underline">Jornadas</a>
-      <a href="reglas.html" class="hover:underline">Reglas</a>
-    </nav>
-  </header>
+  <!-- Navbar -->
+  <nav class="bg-gray-800 p-4 flex justify-center gap-6 text-yellow-400 font-bold">
+    <a href="index.html">Liga y Torneo</a>
+    <a href="jornadas.html" class="underline">Jornadas</a>
+    <a href="reglas.html">Reglas</a>
+  </nav>
 
-  <main class="max-w-4xl mx-auto p-4">
-    <div id="jornadas" class="space-y-6"></div>
+  <header class="p-6 text-center text-3xl font-bold text-yellow-400">📅 Jornadas PokeLeague</header>
+
+  <main class="max-w-4xl mx-auto px-4 py-6">
+    <div id="contenedor-jornadas"></div>
   </main>
 
   <script>
     fetch("datos.json")
       .then(res => res.json())
       .then(data => {
-        const jornadas = document.getElementById("jornadas");
-        data.jornadas.forEach((jornada, i) => {
-          const card = document.createElement("div");
-          card.className = "bg-gray-800 p-4 rounded-xl border border-yellow-600 shadow-md";
-          card.innerHTML = `<h2 class="text-xl font-bold mb-2 text-yellow-300">Jornada ${i + 1}</h2>`;
-          jornada.forEach(match => {
-            card.innerHTML += `<p>${match.local} ${match.resultado} ${match.visitante}</p>`;
+        const contenedor = document.getElementById("contenedor-jornadas");
+        data.jornadas?.forEach((jornada, i) => {
+          if (!Array.isArray(jornada)) return;
+          const div = document.createElement("div");
+          div.className = "card";
+          div.innerHTML = `<h2 class="text-xl font-semibold text-yellow-300 mb-2">Jornada ${i + 1}</h2>`;
+          jornada.forEach(partido => {
+            div.innerHTML += `<p>${partido.local} vs ${partido.visitante} - <strong>${partido.resultado}</strong></p>`;
           });
-          jornadas.appendChild(card);
+          contenedor.appendChild(div);
         });
-      });
+      })
+      .catch(err => console.error("Error al cargar jornadas:", err));
   </script>
-
 </body>
 </html>
