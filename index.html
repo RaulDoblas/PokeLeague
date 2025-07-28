@@ -65,6 +65,7 @@
           <thead>
             <tr class="bg-gray-700 text-yellow-300">
               <th class="py-2 px-4">Entrenador</th>
+              <th class="py-2 px-4">Tipo</th>
               <th class="py-2 px-4">Puntos</th>
               <th class="py-2 px-4">Victorias</th>
               <th class="py-2 px-4">Derrotas</th>
@@ -94,6 +95,7 @@
           row.className = "border-b border-gray-700 hover:bg-gray-800";
           row.innerHTML = `
             <td class="py-2 px-4">${entrenador.nombre}</td>
+            <td class="py-2 px-4">${entrenador.tipo}</td>
             <td class="py-2 px-4">${entrenador.puntos}</td>
             <td class="py-2 px-4">${entrenador.victorias}</td>
             <td class="py-2 px-4">${entrenador.derrotas}</td>
