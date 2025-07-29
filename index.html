@@ -90,7 +90,15 @@
       .then(data => {
         // Liga
         const tabla = document.getElementById("tabla-liga");
-        const ligaOrdenada = (data.liga || []).slice().sort((a, b) => b.puntos - a.puntos);
+        const ligaOrdenada = (data.liga || [])
+          .slice()
+          .sort((a, b) => {
+            if (b.victorias !== a.victorias) {
+              return b.victorias - a.victorias;
+            }
+            return b.puntos - a.puntos;
+          });
+
 
         ligaOrdenada.forEach(entrenador => {
           const row = document.createElement("tr");
