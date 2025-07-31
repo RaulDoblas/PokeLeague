@@ -1,115 +1,616 @@
 {
   "liga": [
-  { "nombre": "Nieto", "tipo": "Roca", "puntos": 20, "victorias": 6, "derrotas": 1 },
-  { "nombre": "Victor", "tipo": "Fantasma", "puntos": 17, "victorias": 5, "derrotas": 2 },
-  { "nombre": "Pablo", "tipo": "Dragon", "puntos": 17, "victorias": 5, "derrotas": 2 },
-  { "nombre": "Pedro","tipo": "Volador", "puntos": 17, "victorias": 5, "derrotas": 2 },
-  { "nombre": "Rau","tipo": "Normal", "puntos": 17, "victorias": 5, "derrotas": 2 },
-  { "nombre": "Fiz", "tipo": "Acero","puntos": 11, "victorias": 3, "derrotas": 4 },
-  { "nombre": "Felipe", "tipo": "Lucha","puntos": 15, "victorias": 4, "derrotas": 3 },
-  { "nombre": "Raul","tipo": "Electrico", "puntos": 13, "victorias": 4, "derrotas": 3 },
-  { "nombre": "Toni", "tipo": "Bicho","puntos": 10, "victorias": 3, "derrotas": 4 },
-  { "nombre": "Antonio", "tipo": "Planta","puntos": 12, "victorias": 3, "derrotas": 4 },
-  { "nombre": "Dominik", "tipo": "Hielo","puntos": 9, "victorias": 3, "derrotas": 4 },
-  { "nombre": "Xavi", "tipo": "Fuego","puntos": 11, "victorias": 3, "derrotas": 4 },
-  { "nombre": "Javi", "tipo": "Psiquico","puntos": 12, "victorias": 4, "derrotas": 3 },
-  { "nombre": "Luis", "tipo": "Agua","puntos": 12, "victorias": 4, "derrotas": 3 },
-  { "nombre": "Angel","tipo": "Hada", "puntos": 8, "victorias": 2, "derrotas": 5 },
-  { "nombre": "Antonio Ire", "tipo": "Siniestro","puntos": 6, "victorias": 2, "derrotas": 4 },
-  { "nombre": "Dylan", "tipo": "Veneno","puntos": 5, "victorias": 1, "derrotas": 5 },
-  { "nombre": "Alvaro", "tipo": "Tierra","puntos": 0, "victorias": 0, "derrotas": 7 }
-],
+    {
+      "nombre": "Nieto",
+      "tipo": "Roca",
+      "puntos": 20,
+      "victorias": 6,
+      "derrotas": 1
+    },
+    {
+      "nombre": "Victor",
+      "tipo": "Fantasma",
+      "puntos": 17,
+      "victorias": 5,
+      "derrotas": 2
+    },
+    {
+      "nombre": "Pablo",
+      "tipo": "Dragon",
+      "puntos": 17,
+      "victorias": 5,
+      "derrotas": 2
+    },
+    {
+      "nombre": "Pedro",
+      "tipo": "Volador",
+      "puntos": 17,
+      "victorias": 5,
+      "derrotas": 2
+    },
+    {
+      "nombre": "Rau",
+      "tipo": "Normal",
+      "puntos": 17,
+      "victorias": 5,
+      "derrotas": 2
+    },
+    {
+      "nombre": "Fiz",
+      "tipo": "Acero",
+      "puntos": 11,
+      "victorias": 3,
+      "derrotas": 4
+    },
+    {
+      "nombre": "Felipe",
+      "tipo": "Lucha",
+      "puntos": 15,
+      "victorias": 4,
+      "derrotas": 3
+    },
+    {
+      "nombre": "Raul",
+      "tipo": "Electrico",
+      "puntos": 13,
+      "victorias": 4,
+      "derrotas": 3
+    },
+    {
+      "nombre": "Toni",
+      "tipo": "Bicho",
+      "puntos": 10,
+      "victorias": 3,
+      "derrotas": 4
+    },
+    {
+      "nombre": "Antonio",
+      "tipo": "Planta",
+      "puntos": 12,
+      "victorias": 3,
+      "derrotas": 4
+    },
+    {
+      "nombre": "Dominik",
+      "tipo": "Hielo",
+      "puntos": 9,
+      "victorias": 3,
+      "derrotas": 4
+    },
+    {
+      "nombre": "Xavi",
+      "tipo": "Fuego",
+      "puntos": 11,
+      "victorias": 3,
+      "derrotas": 4
+    },
+    {
+      "nombre": "Javi",
+      "tipo": "Psiquico",
+      "puntos": 12,
+      "victorias": 4,
+      "derrotas": 3
+    },
+    {
+      "nombre": "Luis",
+      "tipo": "Agua",
+      "puntos": 12,
+      "victorias": 4,
+      "derrotas": 3
+    },
+    {
+      "nombre": "Angel",
+      "tipo": "Hada",
+      "puntos": 8,
+      "victorias": 2,
+      "derrotas": 5
+    },
+    {
+      "nombre": "Antonio Ire",
+      "tipo": "Siniestro",
+      "puntos": 9,
+      "victorias": 3,
+      "derrotas": 4
+    },
+    {
+      "nombre": "Dylan",
+      "tipo": "Veneno",
+      "puntos": 5,
+      "victorias": 1,
+      "derrotas": 6
+    },
+    {
+      "nombre": "Alvaro",
+      "tipo": "Tierra",
+      "puntos": 0,
+      "victorias": 0,
+      "derrotas": 7
+    }
+  ],
   "jornadas": [
     [
-      { "local": "Antonio", "visitante": "Pedro", "resultado": "2-0", "puntosGanados": 5 },
-      { "local": "Dominik", "visitante": "Dylan", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Xavi", "visitante": "Angel", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Antonio Ire", "visitante": "Raul", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Toni", "visitante": "Fiz", "resultado": "2-0", "puntosGanados": 4 },
-      { "local": "Nieto", "visitante": "Felipe", "resultado": "2-0", "puntosGanados": 5 },
-      { "local": "Victor", "visitante": "Javi", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Rau", "visitante": "Luis", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Pablo", "visitante": "Alvaro", "resultado": "2-0", "puntosGanados": 3 }
+      {
+        "local": "Antonio",
+        "visitante": "Pedro",
+        "resultado": "2-0",
+        "puntosGanados": 5
+      },
+      {
+        "local": "Dominik",
+        "visitante": "Dylan",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Xavi",
+        "visitante": "Angel",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Antonio Ire",
+        "visitante": "Raul",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Toni",
+        "visitante": "Fiz",
+        "resultado": "2-0",
+        "puntosGanados": 4
+      },
+      {
+        "local": "Nieto",
+        "visitante": "Felipe",
+        "resultado": "2-0",
+        "puntosGanados": 5
+      },
+      {
+        "local": "Victor",
+        "visitante": "Javi",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Rau",
+        "visitante": "Luis",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Pablo",
+        "visitante": "Alvaro",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      }
     ],
     [
-      { "local": "Fiz", "visitante": "Felipe", "resultado": "2-0", "puntosGanados": 5 },
-      { "local": "Pedro", "visitante": "Javi", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Dominik", "visitante": "Antonio", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Angel", "visitante": "Dylan", "resultado": "2-0", "puntosGanados": 5 },
-      { "local": "Raul", "visitante": "Rau", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Toni", "visitante": "Antonio Ire", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Nieto", "visitante": "Victor", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Luis", "visitante": "Alvaro", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Pablo", "visitante": "Xavi", "resultado": "2-0", "puntosGanados": 3 }
+      {
+        "local": "Fiz",
+        "visitante": "Felipe",
+        "resultado": "2-0",
+        "puntosGanados": 5
+      },
+      {
+        "local": "Pedro",
+        "visitante": "Javi",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Dominik",
+        "visitante": "Antonio",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Angel",
+        "visitante": "Dylan",
+        "resultado": "2-0",
+        "puntosGanados": 5
+      },
+      {
+        "local": "Raul",
+        "visitante": "Rau",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Toni",
+        "visitante": "Antonio Ire",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Nieto",
+        "visitante": "Victor",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Luis",
+        "visitante": "Alvaro",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Pablo",
+        "visitante": "Xavi",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      }
     ],
     [
-      { "local": "Antonio", "visitante": "Fiz", "resultado": "2-0", "puntosGanados": 4 },
-      { "local": "Pedro", "visitante": "Xavi", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Raul", "visitante": "Angel", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Nieto", "visitante": "Toni", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Javi", "visitante": "Felipe", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Dylan", "visitante": "Alvaro", "resultado": "2-0", "puntosGanados": 5 },
-      { "local": "Victor", "visitante": "Luis", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Rau", "visitante": "Antonio Ire", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Pablo", "visitante": "Dominik", "resultado": "2-0", "puntosGanados": 5 }
+      {
+        "local": "Antonio",
+        "visitante": "Fiz",
+        "resultado": "2-0",
+        "puntosGanados": 4
+      },
+      {
+        "local": "Pedro",
+        "visitante": "Xavi",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Raul",
+        "visitante": "Angel",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Nieto",
+        "visitante": "Toni",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Javi",
+        "visitante": "Felipe",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Dylan",
+        "visitante": "Alvaro",
+        "resultado": "2-0",
+        "puntosGanados": 5
+      },
+      {
+        "local": "Victor",
+        "visitante": "Luis",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Rau",
+        "visitante": "Antonio Ire",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Pablo",
+        "visitante": "Dominik",
+        "resultado": "2-0",
+        "puntosGanados": 5
+      }
     ],
     [
-      { "local": "Dominik", "visitante": "Pedro", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Felipe", "visitante": "Alvaro", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Xavi", "visitante": "Fiz", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Toni", "visitante": "Raul", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Nieto", "visitante": "Pablo", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Javi", "visitante": "Dylan", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Victor", "visitante": "Antonio Ire", "resultado": "2-0", "puntosGanados": 5 },
-      { "local": "Rau", "visitante": "Antonio", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Luis", "visitante": "Angel", "resultado": "2-0", "puntosGanados": 3 }
+      {
+        "local": "Dominik",
+        "visitante": "Pedro",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Felipe",
+        "visitante": "Alvaro",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Xavi",
+        "visitante": "Fiz",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Toni",
+        "visitante": "Raul",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Nieto",
+        "visitante": "Pablo",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Javi",
+        "visitante": "Dylan",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Victor",
+        "visitante": "Antonio Ire",
+        "resultado": "2-0",
+        "puntosGanados": 5
+      },
+      {
+        "local": "Rau",
+        "visitante": "Antonio",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Luis",
+        "visitante": "Angel",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      }
     ],
     [
-      { "local": "Fiz", "visitante": "Dylan", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Pedro", "visitante": "Luis", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Felipe", "visitante": "Angel", "resultado": "2-0", "puntosGanados": 5 },
-      { "local": "Raul", "visitante": "Antonio", "resultado": "2-0", "puntosGanados": 4 },
-      { "local": "Antonio Ire", "visitante": "Alvaro", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Nieto", "visitante": "Rau", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Javi", "visitante": "Xavi", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Victor", "visitante": "Dominik", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Pablo", "visitante": "Toni", "resultado": "2-0", "puntosGanados": 3 }
+      {
+        "local": "Fiz",
+        "visitante": "Dylan",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Pedro",
+        "visitante": "Luis",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Felipe",
+        "visitante": "Angel",
+        "resultado": "2-0",
+        "puntosGanados": 5
+      },
+      {
+        "local": "Raul",
+        "visitante": "Antonio",
+        "resultado": "2-0",
+        "puntosGanados": 4
+      },
+      {
+        "local": "Antonio Ire",
+        "visitante": "Alvaro",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Nieto",
+        "visitante": "Rau",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Javi",
+        "visitante": "Xavi",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Victor",
+        "visitante": "Dominik",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Pablo",
+        "visitante": "Toni",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      }
     ],
     [
-      { "local": "Fiz", "visitante": "Antonio Ire", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Pedro", "visitante": "Toni", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Felipe", "visitante": "Antonio", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Angel", "visitante": "Alvaro", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Nieto", "visitante": "Raul", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Victor", "visitante": "Pablo", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Rau", "visitante": "Xavi", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Luis", "visitante": "Dylan", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Javi", "visitante": "Dominik", "resultado": "2-0", "puntosGanados": 3 }
+      {
+        "local": "Fiz",
+        "visitante": "Antonio Ire",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Pedro",
+        "visitante": "Toni",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Felipe",
+        "visitante": "Antonio",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Angel",
+        "visitante": "Alvaro",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Nieto",
+        "visitante": "Raul",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Victor",
+        "visitante": "Pablo",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Rau",
+        "visitante": "Xavi",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Luis",
+        "visitante": "Dylan",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Javi",
+        "visitante": "Dominik",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      }
     ],
     [
-      { "local": "Rau", "visitante": "Victor", "resultado": "2-0", "puntosGanados": 5 },
-      { "local": "Pedro", "visitante": "Nieto", "resultado": "2-0", "puntosGanados": 5 },
-      { "local": "Raul", "visitante": "Fiz", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Antonio", "visitante": "Angel", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Pablo", "visitante": "Javi", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Felipe", "visitante": "Toni", "resultado": "2-0", "puntosGanados": 4 },
-      { "local": "Luis", "visitante": "Dominik", "resultado": "2-0", "puntosGanados": 3 },
-      { "local": "Xavi", "visitante": "Alvaro", "resultado": "2-0", "puntosGanados": 5 }
+      {
+        "local": "Rau",
+        "visitante": "Victor",
+        "resultado": "2-0",
+        "puntosGanados": 5
+      },
+      {
+        "local": "Pedro",
+        "visitante": "Nieto",
+        "resultado": "2-0",
+        "puntosGanados": 5
+      },
+      {
+        "local": "Raul",
+        "visitante": "Fiz",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Antonio",
+        "visitante": "Angel",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Pablo",
+        "visitante": "Javi",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Felipe",
+        "visitante": "Toni",
+        "resultado": "2-0",
+        "puntosGanados": 4
+      },
+      {
+        "local": "Luis",
+        "visitante": "Dominik",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      },
+      {
+        "local": "Xavi",
+        "visitante": "Alvaro",
+        "resultado": "2-0",
+        "puntosGanados": 5
+      },
+      {
+        "local": "Antonio Ire",
+        "visitante": "Dylan",
+        "resultado": "2-0",
+        "puntosGanados": 3
+      }
+    ],
+    [
+      {
+        "local": "Nieto",
+        "visitante": "Javi",
+        "resultado": "-",
+        "puntosGanados": 0
+      },
+      {
+        "local": "Pablo",
+        "visitante": "Rau",
+        "resultado": "-",
+        "puntosGanados": 0
+      },
+      {
+        "local": "Pedro",
+        "visitante": "Victor",
+        "resultado": "-",
+        "puntosGanados": 0
+      },
+      {
+        "local": "Felipe",
+        "visitante": "Raul",
+        "resultado": "-",
+        "puntosGanados": 0
+      },
+      {
+        "local": "Luis",
+        "visitante": "Antonio",
+        "resultado": "-",
+        "puntosGanados": 0
+      },
+      {
+        "local": "Fiz",
+        "visitante": "Dominik",
+        "resultado": "-",
+        "puntosGanados": 0
+      },
+      {
+        "local": "Xavi",
+        "visitante": "Dylan",
+        "resultado": "-",
+        "puntosGanados": 0
+      },
+      {
+        "local": "Toni",
+        "visitante": "Alvaro",
+        "resultado": "-",
+        "puntosGanados": 0
+      },
+      {
+        "local": "Antonio Ire",
+        "visitante": "Angel",
+        "resultado": "-",
+        "puntosGanados": 0
+      }
     ]
   ],
   "torneo": {
     "cuartos": [
-      ["-", "-"],
-      ["-", "-"],
-      ["-", "-"],
-      ["-", "-"]
+      [
+        "-",
+        "-"
+      ],
+      [
+        "-",
+        "-"
+      ],
+      [
+        "-",
+        "-"
+      ],
+      [
+        "-",
+        "-"
+      ]
     ],
     "semis": [
-      ["-", "-"],
-      ["-", "-"]
+      [
+        "-",
+        "-"
+      ],
+      [
+        "-",
+        "-"
+      ]
     ],
     "final": [
-      ["-", "-"]
+      [
+        "-",
+        "-"
+      ]
     ]
   }
 }
