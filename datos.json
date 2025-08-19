@@ -116,6 +116,40 @@
         "-"
       ]
     ]
-  }
+  },
+  "equipos": [
+    {
+      "nombre": "Nieto",
+      "pokes": []
+    },
+    {
+      "nombre": "Angel",
+      "pokes": []
+    },
+    {
+      "nombre": "Toni",
+      "pokes": []
+    },
+    {
+      "nombre": "Felipe",
+      "pokes": []
+    },
+    {
+      "nombre": "Rau",
+      "pokes": []
+    },
+    {
+      "nombre": "Raul",
+      "pokes": []
+    },
+    {
+      "nombre": "Antonio",
+      "pokes": []
+    },
+    {
+      "nombre": "Javi",
+      "pokes": []
+    }
+  ]
 }
 
