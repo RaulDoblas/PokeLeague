@@ -36,19 +36,30 @@
     fetch("datos.json")
       .then(res => res.json())
       .then(data => {
-        const contenedor = document.getElementById("contenedor-jornadas");
-        data.jornadas?.forEach((jornada, i) => {
-          if (!Array.isArray(jornada)) return;
+        const contenedor = document.getElementById("contenedor-equipos");
+        data.equipos?.forEach(equipo => {
           const div = document.createElement("div");
           div.className = "card";
-          div.innerHTML = `<h2 class="text-xl font-semibold text-yellow-300 mb-2">Jornada ${i + 1}</h2>`;
-          jornada.forEach(partido => {
-            div.innerHTML += `<p>${partido.local} vs ${partido.visitante} - (<strong>${partido.resultado}</strong>) - +<strong>${partido.puntosGanados}</strong></p>`;
-          });
+          div.innerHTML = `
+            <h2 class="text-xl font-semibold text-yellow-300 mb-2">${equipo.nombre}</h2>
+            <div class="grid grid-cols-4 gap-4">
+              ${equipo.pokes
+                .map(poke => {
+                  const imgSrc = data.pokes[poke] || "https://via.placeholder.com/100";
+                  return `
+                    <div class="text-center">
+                      <img src="${imgSrc}" alt="${poke}" class="w-20 h-20 mx-auto">
+                      <p class="text-sm mt-2">${poke}</p>
+                    </div>
+                  `;
+                })
+                .join("")}
+            </div>
+          `;
           contenedor.appendChild(div);
         });
       })
-      .catch(err => console.error("Error al cargar jornadas:", err));
+      .catch(err => console.error("Error al cargar equipos:", err));
   </script>
 </body>
 </html>

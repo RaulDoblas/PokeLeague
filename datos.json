@@ -46,56 +46,47 @@
       {
         "local": "Antonio",
         "visitante": "Pedro",
-        "resultado": "2-0",
-        "puntosGanados": 5
+        "resultado": "-"
       },
       {
         "local": "Dominik",
         "visitante": "Dylan",
-        "resultado": "2-0",
-        "puntosGanados": 3
+        "resultado": "2-0"
       },
       {
         "local": "Xavi",
         "visitante": "Angel",
-        "resultado": "2-0",
-        "puntosGanados": 3
+        "resultado": "2-0"
       },
       {
         "local": "Antonio Ire",
         "visitante": "Raul",
-        "resultado": "2-0",
-        "puntosGanados": 3
+        "resultado": "2-0"
       },
       {
         "local": "Toni",
         "visitante": "Fiz",
-        "resultado": "2-0",
-        "puntosGanados": 4
+        "resultado": "2-0"
       },
       {
         "local": "Nieto",
         "visitante": "Felipe",
-        "resultado": "2-0",
-        "puntosGanados": 5
+        "resultado": "2-0"
       },
       {
         "local": "Victor",
         "visitante": "Javi",
-        "resultado": "2-0",
-        "puntosGanados": 3
+        "resultado": "2-0"
       },
       {
         "local": "Rau",
         "visitante": "Luis",
-        "resultado": "2-0",
-        "puntosGanados": 3
+        "resultado": "2-0"
       },
       {
         "local": "Pablo",
         "visitante": "Alvaro",
-        "resultado": "2-0",
-        "puntosGanados": 3
+        "resultado": "2-0"
       }
     ]
   ],
@@ -120,36 +111,102 @@
   "equipos": [
     {
       "nombre": "Nieto",
-      "pokes": []
+      "pokes": ["archadulon","politoed","maushold","sneasler","gothithelle","kilowattrel","sawsbuck",""]
     },
     {
       "nombre": "Angel",
-      "pokes": []
+      "pokes": ["gholdengo","amoongus","garchomp","murkrow","hitmontop","flamigo","vivillon","gardevoir"]
     },
     {
       "nombre": "Toni",
-      "pokes": []
+      "pokes": ["kingambit","pelipper","volcarona","basculegion-male","electabuzz","ludicolo","comfey","noivern"]
     },
     {
       "nombre": "Felipe",
-      "pokes": []
+      "pokes": ["indeedee-female","armarouge","gallade","torkoal","hatterene","lilligant-hisuian","meowscarada","dodrio"]
     },
     {
       "nombre": "Rau",
-      "pokes": []
+      "pokes": ["dondozo","tatsugiri","talonflame","dragonite","glimmora","pawmot","sylveon","toxtricity"]
     },
     {
       "nombre": "Raul",
-      "pokes": []
+      "pokes": ["incineroar","rillaboom","primarina","weezing-galarian","corviknight","hydreigon","crabominable","slaking"]
     },
     {
       "nombre": "Antonio",
-      "pokes": []
+      "pokes": ["whimsicott","annihilape","arcanine-hisuian","typhlosion-hisuian","tinkaton","indeedee-male","gastrodon","jolteon"]
     },
     {
       "nombre": "Javi",
-      "pokes": []
+      "pokes": ["ursaluna-bloodmoon","dragapult","grimmsnarl","breloom","porygon2","oranguru","electrode-hisuian","mabosstiff"]
     }
-  ]
+  ],
+  "pokes": {
+    "gholdengo": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gholdengo.png",
+    "whimsicott": "https://img.pokemondb.net/sprites/scarlet-violet/normal/whimsicott.png",
+    "annihilape": "https://img.pokemondb.net/sprites/scarlet-violet/normal/annihilape.png",
+    "tinkaton": "https://img.pokemondb.net/sprites/scarlet-violet/normal/tinkaton.png",
+    "indeedee-male": "https://img.pokemondb.net/sprites/scarlet-violet/normal/indeedee-male.png",
+    "typhlosion-hisuian": "https://img.pokemondb.net/sprites/scarlet-violet/normal/typhlosion-hisuian.png",
+    "arcanine-hisuian": "https://img.pokemondb.net/sprites/scarlet-violet/normal/arcanine-hisuian.png",
+    "archaludon": "https://img.pokemondb.net/sprites/scarlet-violet/normal/archaludon.png",
+    "politoed": "https://img.pokemondb.net/sprites/scarlet-violet/normal/politoed.png",
+    "maushold": "https://img.pokemondb.net/sprites/scarlet-violet/normal/maushold.png",
+    "sneasler": "https://img.pokemondb.net/sprites/scarlet-violet/normal/sneasler.png",
+    "gothithelle": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gothitelle.png",
+    "kilowattrel": "https://img.pokemondb.net/sprites/scarlet-violet/normal/kilowattrel.png",
+    "gastrodon": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gastrodon.png",
+    "jolteon": "https://img.pokemondb.net/sprites/scarlet-violet/normal/jolteon.png",
+    "basculegion-female": "https://img.pokemondb.net/sprites/scarlet-violet/normal/basculegion-female.png",
+    "sawsbuck": "https://img.pokemondb.net/sprites/scarlet-violet/normal/sawsbuck.png",
+    "dondozo": "https://img.pokemondb.net/sprites/scarlet-violet/normal/dondozo.png",
+    "tatsugiri": "https://img.pokemondb.net/sprites/scarlet-violet/normal/tatsugiri.png",
+    "talonflame": "https://img.pokemondb.net/sprites/scarlet-violet/normal/talonflame.png",
+    "dragonite": "https://img.pokemondb.net/sprites/scarlet-violet/normal/dragonite.png",
+    "glimmora": "https://img.pokemondb.net/sprites/scarlet-violet/normal/glimmora.png",
+    "pawmot": "https://img.pokemondb.net/sprites/scarlet-violet/normal/pawmot.png",
+    "sylveon": "https://img.pokemondb.net/sprites/scarlet-violet/normal/sylveon.png",
+    "toxtricity": "https://img.pokemondb.net/sprites/scarlet-violet/normal/toxtricity.png",
+    "ammoonguss": "https://img.pokemondb.net/sprites/scarlet-violet/normal/amoonguss.png",
+    "garchomp": "https://img.pokemondb.net/sprites/scarlet-violet/normal/garchomp.png",
+    "murkrow": "https://img.pokemondb.net/sprites/scarlet-violet/normal/murkrow.png",
+    "hitmontop": "https://img.pokemondb.net/sprites/scarlet-violet/normal/hitmontop.png",
+    "flamigo": "https://img.pokemondb.net/sprites/scarlet-violet/normal/flamigo.png",
+    "vivillon": "https://img.pokemondb.net/sprites/scarlet-violet/normal/vivillon.png",
+    "gardevoir": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gardevoir.png",
+    "kingambit": "https://img.pokemondb.net/sprites/scarlet-violet/normal/kingambit.png",
+    "pelipper": "https://img.pokemondb.net/sprites/scarlet-violet/normal/pelipper.png",
+    "volcarona": "https://img.pokemondb.net/sprites/scarlet-violet/normal/volcarona.png",
+    "basculegion-male": "https://img.pokemondb.net/sprites/scarlet-violet/normal/basculegion-male.png",
+    "electabuzz": "https://img.pokemondb.net/sprites/scarlet-violet/normal/electabuzz.png",
+    "ludicolo": "https://img.pokemondb.net/sprites/scarlet-violet/normal/ludicolo.png",
+    "comfey": "https://img.pokemondb.net/sprites/scarlet-violet/normal/comfey.png",
+    "noivern": "https://img.pokemondb.net/sprites/scarlet-violet/normal/noivern.png",
+    "indeedee-female": "https://img.pokemondb.net/sprites/scarlet-violet/normal/indeedee-female.png",
+    "armarouge": "https://img.pokemondb.net/sprites/scarlet-violet/normal/armarouge.png",
+    "gallade": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gallade.png",
+    "torkoal": "https://img.pokemondb.net/sprites/scarlet-violet/normal/torkoal.png",
+    "hatterene": "https://img.pokemondb.net/sprites/scarlet-violet/normal/hatterene.png",
+    "lilligant-hisuian": "https://img.pokemondb.net/sprites/scarlet-violet/normal/lilligant-hisuian.png",
+    "meowscarada": "https://img.pokemondb.net/sprites/scarlet-violet/normal/meowscarada.png",
+    "dodrio": "https://img.pokemondb.net/sprites/scarlet-violet/normal/dodrio.png",
+    "incineror": "https://img.pokemondb.net/sprites/scarlet-violet/normal/incineroar.png",
+    "rillaboom": "https://img.pokemondb.net/sprites/scarlet-violet/normal/rillaboom.png",
+    "primarina": "https://img.pokemondb.net/sprites/scarlet-violet/normal/primarina.png",
+    "weezing-galarian": "https://img.pokemondb.net/sprites/scarlet-violet/normal/weezing-galarian.png",
+    "corviknight": "https://img.pokemondb.net/sprites/scarlet-violet/normal/corviknight.png",
+    "hydreigon": "https://img.pokemondb.net/sprites/scarlet-violet/normal/hydreigon.png",
+    "crabominable": "https://img.pokemondb.net/sprites/scarlet-violet/normal/crabominable.png",
+    "slaking": "https://img.pokemondb.net/sprites/scarlet-violet/normal/slaking.png",
+    "ursaluna-bloodmoon": "https://img.pokemondb.net/sprites/scarlet-violet/normal/ursaluna-bloodmoon.png",
+    "dragapult": "https://img.pokemondb.net/sprites/scarlet-violet/normal/dragapult.png",
+    "grimmsnarl": "https://img.pokemondb.net/sprites/scarlet-violet/normal/grimmsnarl.png",
+    "breloom": "https://img.pokemondb.net/sprites/scarlet-violet/normal/breloom.png",
+    "porygon2": "https://img.pokemondb.net/sprites/scarlet-violet/normal/porygon2.png",
+    "oranguru": "https://img.pokemondb.net/sprites/scarlet-violet/normal/oranguru.png",
+    "electrode-hisuian": "https://img.pokemondb.net/sprites/scarlet-violet/normal/electrode-hisuian.png",
+    "mabosstiff": "https://img.pokemondb.net/sprites/scarlet-violet/normal/mabosstiff.png"
+  }
 }
 

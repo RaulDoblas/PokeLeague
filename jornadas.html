@@ -43,7 +43,7 @@
           div.className = "card";
           div.innerHTML = `<h2 class="text-xl font-semibold text-yellow-300 mb-2">Jornada ${i + 1}</h2>`;
           jornada.forEach(partido => {
-            div.innerHTML += `<p>${partido.local} vs ${partido.visitante} - (<strong>${partido.resultado}</strong>) - +<strong>${partido.puntosGanados}</strong></p>`;
+            div.innerHTML += `<p>${partido.local} vs ${partido.visitante} - (<strong>${partido.resultado}</strong>)</p>`;
           });
           contenedor.appendChild(div);
         });
