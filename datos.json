@@ -115,7 +115,7 @@
     },
     {
       "nombre": "Angel",
-      "pokes": ["gholdengo","amoongus","garchomp","murkrow","hitmontop","flamigo","vivillon","gardevoir"]
+      "pokes": ["gholdengo","amoonguss","garchomp","murkrow","hitmontop","flamigo","vivillon","gardevoir"]
     },
     {
       "nombre": "Toni",
@@ -168,7 +168,7 @@
     "pawmot": "https://img.pokemondb.net/sprites/scarlet-violet/normal/pawmot.png",
     "sylveon": "https://img.pokemondb.net/sprites/scarlet-violet/normal/sylveon.png",
     "toxtricity": "https://img.pokemondb.net/sprites/scarlet-violet/normal/toxtricity.png",
-    "ammoonguss": "https://img.pokemondb.net/sprites/scarlet-violet/normal/amoonguss.png",
+    "amoonguss": "https://img.pokemondb.net/sprites/scarlet-violet/normal/amoonguss.png",
     "garchomp": "https://img.pokemondb.net/sprites/scarlet-violet/normal/garchomp.png",
     "murkrow": "https://img.pokemondb.net/sprites/scarlet-violet/normal/murkrow.png",
     "hitmontop": "https://img.pokemondb.net/sprites/scarlet-violet/normal/hitmontop.png",
@@ -209,4 +209,5 @@
     "mabosstiff": "https://img.pokemondb.net/sprites/scarlet-violet/normal/mabosstiff.png"
   }
 }
+
 
