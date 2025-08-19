@@ -65,8 +65,6 @@
           <thead>
             <tr class="bg-gray-700 text-yellow-300">
               <th class="py-2 px-4">Entrenador</th>
-              <th class="py-2 px-4">Tipo</th>
-              <th class="py-2 px-4">Puntos</th>
               <th class="py-2 px-4">Victorias</th>
               <th class="py-2 px-4">Derrotas</th>
             </tr>
@@ -92,11 +90,8 @@
         const tabla = document.getElementById("tabla-liga");
         const ligaOrdenada = (data.liga || [])
           .slice()
-          .sort((a, b) => {
-            if (b.victorias !== a.victorias) {
+          .sort((a, b) => {    
               return b.victorias - a.victorias;
-            }
-            return b.puntos - a.puntos;
           });
 
 
@@ -105,8 +100,6 @@
           row.className = "border-b border-gray-700 hover:bg-gray-800";
           row.innerHTML = `
             <td class="py-2 px-4">${entrenador.nombre}</td>
-            <td class="py-2 px-4">${entrenador.tipo}</td>
-            <td class="py-2 px-4">${entrenador.puntos}</td>
             <td class="py-2 px-4">${entrenador.victorias}</td>
             <td class="py-2 px-4">${entrenador.derrotas}</td>
           `;
@@ -114,9 +107,8 @@
         });
 
         // Torneo brackets
-        const fases = ["cuartos", "semis", "final"];
+        const fases = [ "semis", "final"];
         const nombres = {
-          cuartos: "Cuartos de Final",
           semis: "Semifinales",
           final: "Final"
         };
@@ -144,3 +136,4 @@
   </script>
 </body>
 </html>
+
