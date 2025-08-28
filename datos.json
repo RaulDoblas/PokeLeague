@@ -3,7 +3,7 @@
     {
       "nombre": "Nieto",
       "victorias": 0,
-      "derrotas": 0
+      "derrotas": 1
     },
     {
       "nombre": "Angel",
@@ -37,7 +37,7 @@
     },
     {
       "nombre": "Javi",
-      "victorias": 0,
+      "victorias": 1,
       "derrotas": 0
     }
   ],
@@ -56,7 +56,7 @@
       {
         "local": "Nieto",
         "visitante": "Javi",
-        "resultado": "-"
+        "resultado": "1 - 2"
       },
       {
         "local": "Raul",
@@ -184,6 +184,7 @@
     "mabosstiff": "https://img.pokemondb.net/sprites/scarlet-violet/normal/mabosstiff.png"
   }
 }
+
 
 
 
