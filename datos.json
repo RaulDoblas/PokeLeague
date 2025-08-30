@@ -63,6 +63,28 @@
         "visitante": "Antonio",
         "resultado": "0 - 2"
       }
+    ],
+    [
+      {
+        "local": "Raul",
+        "visitante": "Felipe",
+        "resultado": "-"
+      },
+      {
+        "local": "Javi",
+        "visitante": "Angel",
+        "resultado": "-"
+      },
+      {
+        "local": "Toni",
+        "visitante": "Rau",
+        "resultado": "-"
+      },
+      {
+        "local": "Antonio",
+        "visitante": "Nieto",
+        "resultado": "-"
+      }
     ]
   ],
   "torneo": {
@@ -184,6 +206,7 @@
     "mabosstiff": "https://img.pokemondb.net/sprites/scarlet-violet/normal/mabosstiff.png"
   }
 }
+
 
 
 
