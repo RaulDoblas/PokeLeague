@@ -85,6 +85,32 @@
         "visitante": "Nieto",
         "resultado": "2 - 1"
       }
+    ],
+    [
+      {
+        "local": "Toni",
+        "visitante": "Javi",
+        "resultado": "-",
+        "puntosGanados": 0
+      },
+      {
+        "local": "Rau",
+        "visitante": "Nieto",
+        "resultado": "-",
+        "puntosGanados": 0
+      },
+      {
+        "local": "Angel",
+        "visitante": "Raul",
+        "resultado": "-",
+        "puntosGanados": 0
+      },
+      {
+        "local": "Felipe",
+        "visitante": "Antonio",
+        "resultado": "-",
+        "puntosGanados": 0
+      }
     ]
   ],
   "torneo": {
@@ -108,35 +134,107 @@
   "equipos": [
     {
       "nombre": "Nieto",
-      "pokes": ["archaludon","politoed","maushold","sneasler","gothithelle","kilowattrel","sawsbuck","basculegion-female"]
+      "pokes": [
+        "archaludon",
+        "politoed",
+        "maushold",
+        "sneasler",
+        "gothithelle",
+        "kilowattrel",
+        "sawsbuck",
+        "basculegion-female"
+      ]
     },
     {
       "nombre": "Angel",
-      "pokes": ["gholdengo","amoonguss","garchomp","murkrow","hitmontop","flamigo","vivillon","gardevoir"]
+      "pokes": [
+        "gholdengo",
+        "amoonguss",
+        "garchomp",
+        "murkrow",
+        "hitmontop",
+        "flamigo",
+        "vivillon",
+        "gardevoir"
+      ]
     },
     {
       "nombre": "Toni",
-      "pokes": ["kingambit","pelipper","volcarona","basculegion-male","electabuzz","ludicolo","comfey","noivern"]
+      "pokes": [
+        "kingambit",
+        "pelipper",
+        "volcarona",
+        "basculegion-male",
+        "electabuzz",
+        "ludicolo",
+        "comfey",
+        "noivern"
+      ]
     },
     {
       "nombre": "Felipe",
-      "pokes": ["indeedee-female","armarouge","gallade","torkoal","hatterene","lilligant-hisuian","meowscarada","dodrio"]
+      "pokes": [
+        "indeedee-female",
+        "armarouge",
+        "gallade",
+        "torkoal",
+        "hatterene",
+        "lilligant-hisuian",
+        "meowscarada",
+        "dodrio"
+      ]
     },
     {
       "nombre": "Rau",
-      "pokes": ["dondozo","tatsugiri","talonflame","dragonite","glimmora","pawmot","sylveon","toxtricity"]
+      "pokes": [
+        "dondozo",
+        "tatsugiri",
+        "talonflame",
+        "dragonite",
+        "glimmora",
+        "pawmot",
+        "sylveon",
+        "toxtricity"
+      ]
     },
     {
       "nombre": "Raul",
-      "pokes": ["incineroar","rillaboom","primarina","weezing-galarian","corviknight","hydreigon","crabominable","slaking"]
+      "pokes": [
+        "incineroar",
+        "rillaboom",
+        "primarina",
+        "weezing-galarian",
+        "corviknight",
+        "hydreigon",
+        "crabominable",
+        "slaking"
+      ]
     },
     {
       "nombre": "Antonio",
-      "pokes": ["whimsicott","annihilape","arcanine-hisuian","typhlosion-hisuian","tinkaton","indeedee-male","gastrodon","jolteon"]
+      "pokes": [
+        "whimsicott",
+        "annihilape",
+        "arcanine-hisuian",
+        "typhlosion-hisuian",
+        "tinkaton",
+        "indeedee-male",
+        "gastrodon",
+        "jolteon"
+      ]
     },
     {
       "nombre": "Javi",
-      "pokes": ["ursaluna-bloodmoon","dragapult","grimmsnarl","breloom","porygon2","oranguru","electrode-hisuian","mabosstiff"]
+      "pokes": [
+        "ursaluna-bloodmoon",
+        "dragapult",
+        "grimmsnarl",
+        "breloom",
+        "porygon2",
+        "oranguru",
+        "electrode-hisuian",
+        "mabosstiff"
+      ]
     }
   ],
   "pokes": {
@@ -206,16 +304,3 @@
     "mabosstiff": "https://img.pokemondb.net/sprites/scarlet-violet/normal/mabosstiff.png"
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
