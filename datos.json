@@ -18,7 +18,7 @@
     {
       "nombre": "Felipe",
       "victorias": 1,
-      "derrotas": 0
+      "derrotas": 1
     },
     {
       "nombre": "Rau",
@@ -27,7 +27,7 @@
     },
     {
       "nombre": "Raul",
-      "victorias": 0,
+      "victorias": 1,
       "derrotas": 1
     },
     {
@@ -68,7 +68,7 @@
       {
         "local": "Raul",
         "visitante": "Felipe",
-        "resultado": "-"
+        "resultado": "2 - 1"
       },
       {
         "local": "Javi",
@@ -206,6 +206,7 @@
     "mabosstiff": "https://img.pokemondb.net/sprites/scarlet-violet/normal/mabosstiff.png"
   }
 }
+
 
 
 
