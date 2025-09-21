@@ -27,13 +27,13 @@ jobs:
 
       - name: Ejecutar script
         run: python generar_jornada_normal.py
-
+   
       - name: Commit y push de cambios
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add datos.json
           git commit -m "Añadir jornada automáticamente [skip ci]" || echo "No hay cambios"
-          git push
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:main
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
