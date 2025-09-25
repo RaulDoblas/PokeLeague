@@ -17,7 +17,7 @@
     },
     {
       "nombre": "Felipe",
-      "victorias": 1,
+      "victorias": 2,
       "derrotas": 1
     },
     {
@@ -33,7 +33,7 @@
     {
       "nombre": "Antonio",
       "victorias": 2,
-      "derrotas": 0
+      "derrotas": 1
     },
     {
       "nombre": "Javi",
@@ -105,7 +105,7 @@
       {
         "local": "Felipe",
         "visitante": "Antonio",
-        "resultado": "-"
+        "resultado": "2 - 1"
       }
     ]
   ],
