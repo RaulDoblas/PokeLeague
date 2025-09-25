@@ -12,7 +12,7 @@
     },
     {
       "nombre": "Toni",
-      "victorias": 0,
+      "victorias": 1,
       "derrotas": 2
     },
     {
@@ -38,7 +38,7 @@
     {
       "nombre": "Javi",
       "victorias": 2,
-      "derrotas": 0
+      "derrotas": 1
     }
   ],
   "jornadas": [
@@ -90,26 +90,22 @@
       {
         "local": "Toni",
         "visitante": "Javi",
-        "resultado": "-",
-        "puntosGanados": 0
+        "resultado": "2 - 0"
       },
       {
         "local": "Rau",
         "visitante": "Nieto",
-        "resultado": "-",
-        "puntosGanados": 0
+        "resultado": "-"
       },
       {
         "local": "Angel",
         "visitante": "Raul",
-        "resultado": "-",
-        "puntosGanados": 0
+        "resultado": "-"
       },
       {
         "local": "Felipe",
         "visitante": "Antonio",
-        "resultado": "-",
-        "puntosGanados": 0
+        "resultado": "-"
       }
     ]
   ],
