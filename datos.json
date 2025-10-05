@@ -8,7 +8,7 @@
     {
       "nombre": "Angel",
       "victorias": 2,
-      "derrotas": 1
+      "derrotas": 2
     },
     {
       "nombre": "Toni",
@@ -23,7 +23,7 @@
     {
       "nombre": "Rau",
       "victorias": 1,
-      "derrotas": 2
+      "derrotas": 3
     },
     {
       "nombre": "Raul",
@@ -32,12 +32,12 @@
     },
     {
       "nombre": "Antonio",
-      "victorias": 2,
+      "victorias": 3,
       "derrotas": 1
     },
     {
       "nombre": "Javi",
-      "victorias": 2,
+      "victorias": 3,
       "derrotas": 1
     }
   ],
@@ -112,7 +112,7 @@
       {
         "local": "Rau",
         "visitante": "Javi",
-        "resultado": "-"
+        "resultado": "0 - 2"
       },
       {
         "local": "Raul",
@@ -127,7 +127,7 @@
       {
         "local": "Angel",
         "visitante": "Antonio",
-        "resultado": "-"
+        "resultado": "1 - 2"
       }
     ]
   ],
