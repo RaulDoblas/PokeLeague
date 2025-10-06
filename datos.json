@@ -2,7 +2,7 @@
   "liga": [
     {
       "nombre": "Nieto",
-      "victorias": 1,
+      "victorias": 2,
       "derrotas": 2
     },
     {
@@ -18,7 +18,7 @@
     {
       "nombre": "Felipe",
       "victorias": 2,
-      "derrotas": 1
+      "derrotas": 2
     },
     {
       "nombre": "Rau",
@@ -122,7 +122,7 @@
       {
         "local": "Nieto",
         "visitante": "Felipe",
-        "resultado": "Nieto mamon"
+        "resultado": "2 - 0"
       },
       {
         "local": "Angel",
