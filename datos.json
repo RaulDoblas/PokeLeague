@@ -12,7 +12,7 @@
     },
     {
       "nombre": "Toni",
-      "victorias": 2,
+      "victorias": 3,
       "derrotas": 2
     },
     {
@@ -33,7 +33,7 @@
     {
       "nombre": "Antonio",
       "victorias": 3,
-      "derrotas": 1
+      "derrotas": 2
     },
     {
       "nombre": "Javi",
@@ -152,7 +152,7 @@
       {
         "local": "Antonio",
         "visitante": "Toni",
-        "resultado": "-",
+        "resultado": "1 - 2",
         "puntosGanados": 0
       }
     ]
