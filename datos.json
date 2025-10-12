@@ -2,13 +2,13 @@
   "liga": [
     {
       "nombre": "Nieto",
-      "victorias": 2,
+      "victorias": 3,
       "derrotas": 2
     },
     {
       "nombre": "Angel",
       "victorias": 2,
-      "derrotas": 2
+      "derrotas": 3
     },
     {
       "nombre": "Toni",
@@ -18,11 +18,11 @@
     {
       "nombre": "Felipe",
       "victorias": 2,
-      "derrotas": 2
+      "derrotas": 3
     },
     {
       "nombre": "Rau",
-      "victorias": 1,
+      "victorias": 2,
       "derrotas": 3
     },
     {
