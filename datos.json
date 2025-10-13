@@ -155,6 +155,32 @@
         "resultado": "1 - 2",
         "puntosGanados": 0
       }
+    ],
+    [
+      {
+        "local": "Raul",
+        "visitante": "Nieto",
+        "resultado": "-",
+        "puntosGanados": 0
+      },
+      {
+        "local": "Angel",
+        "visitante": "Toni",
+        "resultado": "-",
+        "puntosGanados": 0
+      },
+      {
+        "local": "Felipe",
+        "visitante": "Javi",
+        "resultado": "-",
+        "puntosGanados": 0
+      },
+      {
+        "local": "Antonio",
+        "visitante": "Rau",
+        "resultado": "-",
+        "puntosGanados": 0
+      }
     ]
   ],
   "torneo": {
