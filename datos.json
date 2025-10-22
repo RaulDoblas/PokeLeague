@@ -134,26 +134,22 @@
       {
         "local": "Angel",
         "visitante": "Nieto",
-        "resultado": "1 - 2",
-        "puntosGanados": 0
+        "resultado": "1 - 2"
       },
       {
         "local": "Raul",
         "visitante": "Javi",
-        "resultado": "0 - 2",
-        "puntosGanados": 0
+        "resultado": "0 - 2"
       },
       {
         "local": "Rau",
         "visitante": "Felipe",
-        "resultado": "2 - 1",
-        "puntosGanados": 0
+        "resultado": "2 - 1"
       },
       {
         "local": "Antonio",
         "visitante": "Toni",
-        "resultado": "1 - 2",
-        "puntosGanados": 0
+        "resultado": "1 - 2"
       }
     ],
     [
@@ -170,7 +166,7 @@
       {
         "local": "Felipe",
         "visitante": "Javi",
-        "resultado": "-"
+        "resultado": "2 - 0"
       },
       {
         "local": "Antonio",
