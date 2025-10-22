@@ -77,7 +77,7 @@ else:
 
     # Añadir al JSON en el formato requerido
     jornada_json = [
-        {"local": l, "visitante": v, "resultado": "-", "puntosGanados": 0}
+        {"local": l, "visitante": v, "resultado": "-"}
         for l, v in nueva_jornada
     ]
 
