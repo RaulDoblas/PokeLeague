@@ -173,6 +173,28 @@
         "visitante": "Rau",
         "resultado": "2 - 1"
       }
+    ],
+    [
+      {
+        "local": "Rau",
+        "visitante": "Raul",
+        "resultado": "-"
+      },
+      {
+        "local": "Antonio",
+        "visitante": "Javi",
+        "resultado": "-"
+      },
+      {
+        "local": "Angel",
+        "visitante": "Felipe",
+        "resultado": "-"
+      },
+      {
+        "local": "Toni",
+        "visitante": "Nieto",
+        "resultado": "-"
+      }
     ]
   ],
   "torneo": {
