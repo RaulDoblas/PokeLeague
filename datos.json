@@ -17,7 +17,7 @@
     },
     {
       "nombre": "Felipe",
-      "victorias": 2,
+      "victorias": 3,
       "derrotas": 3
     },
     {
@@ -38,7 +38,7 @@
     {
       "nombre": "Javi",
       "victorias": 4,
-      "derrotas": 1
+      "derrotas": 2
     }
   ],
   "jornadas": [
@@ -156,7 +156,7 @@
       {
         "local": "Raul",
         "visitante": "Nieto",
-        "resultado": "-"
+        "resultado": "1 - 2"
       },
       {
         "local": "Angel",
