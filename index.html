@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PokeLeague - Torneo tipo árbol</title>
+  <title>PokeLeague - Bracket real</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
     body {
@@ -12,58 +12,54 @@
     }
 
     .bracket {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 4rem;
-      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
       overflow-x: auto;
       padding-bottom: 3rem;
     }
 
     .round {
-      display: flex;
-      flex-direction: column;
+      display: grid;
       align-items: center;
-      justify-content: space-around;
-      gap: 3rem;
-      position: relative;
+      justify-items: center;
+      gap: 1rem;
     }
 
     .round-title {
       font-weight: bold;
-      text-align: center;
-      margin-bottom: 1rem;
       color: #facc15;
+      text-align: center;
+      margin-bottom: 0.5rem;
     }
 
     .match {
-      position: relative;
       background-color: #1e293b;
       padding: 0.75rem 1rem;
       border-radius: 0.5rem;
       width: 140px;
       text-align: center;
       box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      position: relative;
       font-size: 0.9rem;
     }
 
-    /* Línea horizontal hacia la derecha */
+    /* líneas entre rondas */
     .match::after {
       content: "";
       position: absolute;
-      right: -2rem;
+      right: -1rem;
       top: 50%;
-      width: 2rem;
+      width: 1rem;
       height: 2px;
       background: #64748b;
     }
 
-    /* Líneas verticales que conectan hacia arriba y abajo */
     .connector {
       position: absolute;
-      right: -2rem;
-      width: 2rem;
+      right: -1rem;
+      width: 1rem;
       border-right: 2px solid #64748b;
     }
 
@@ -71,28 +67,15 @@
       top: 0;
       height: 50%;
       border-top: 2px solid #64748b;
-      border-bottom: none;
     }
 
     .connector.down {
       bottom: 0;
       height: 50%;
       border-bottom: 2px solid #64748b;
-      border-top: none;
-    }
-
-    .card {
-      background-color: #1f2937;
-      border-radius: 1rem;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
     }
 
     @media (max-width: 768px) {
-      .bracket {
-        gap: 2rem;
-      }
       .match {
         width: 100px;
         font-size: 0.8rem;
@@ -112,11 +95,10 @@
   <header class="p-6 text-center text-3xl font-bold text-yellow-400">🏆 PokeLeague</header>
 
   <main class="max-w-7xl mx-auto px-4 py-4">
-
     <!-- Clasificación -->
     <section>
       <h2 class="text-2xl font-semibold mb-4">Clasificación Liga</h2>
-      <div class="overflow-x-auto card">
+      <div class="overflow-x-auto bg-gray-800 rounded-lg p-4 shadow">
         <table class="min-w-full text-center">
           <thead>
             <tr class="bg-gray-700 text-yellow-300">
@@ -135,7 +117,6 @@
       <h2 class="text-2xl font-semibold mb-4 text-center">Torneo Final</h2>
       <div id="brackets" class="bracket"></div>
     </section>
-
   </main>
 
   <script>
@@ -145,7 +126,6 @@
         // === LIGA ===
         const tabla = document.getElementById("tabla-liga");
         const ligaOrdenada = (data.liga || []).slice().sort((a, b) => b.victorias - a.victorias);
-
         ligaOrdenada.forEach(entrenador => {
           const row = document.createElement("tr");
           row.className = "border-b border-gray-700 hover:bg-gray-800";
@@ -168,33 +148,29 @@
 
         const bracketsDiv = document.getElementById("brackets");
 
-        // Crea cada columna del bracket
-        fases.forEach((fase, i) => {
+        // Definir filas según cantidad de partidos
+        const alturas = { octavos: 8, cuartos: 4, semis: 2, final: 1 };
+
+        fases.forEach(fase => {
           const emparejamientos = data.torneo?.[fase];
           if (!Array.isArray(emparejamientos)) return;
 
           const columna = document.createElement("div");
           columna.className = "round";
+          columna.style.gridTemplateRows = `repeat(${alturas[fase] * 2}, 1fr)`;
           columna.innerHTML = `<div class="round-title">${nombres[fase]}</div>`;
 
-          emparejamientos.forEach(([p1, p2], idx) => {
+          const espacio = alturas[fase];
+          emparejamientos.forEach((matchData, i) => {
+            const [p1, p2] = matchData;
             const match = document.createElement("div");
             match.className = "match";
+            match.style.gridRow = `${i * (espacio * 2) + 1} / span ${espacio}`;
             match.innerHTML = `
               <div>${p1}</div>
               <div class="text-yellow-300">vs</div>
               <div>${p2}</div>
             `;
-            // Añadir conectores verticales solo si no es la última columna
-            if (i < fases.length - 1) {
-              const connUp = document.createElement("div");
-              connUp.className = "connector up";
-              match.appendChild(connUp);
-
-              const connDown = document.createElement("div");
-              connDown.className = "connector down";
-              match.appendChild(connDown);
-            }
             columna.appendChild(match);
           });
 
