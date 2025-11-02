@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PokeLeague - Bracket real</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/Drarig29/brackets-viewer.js@master/dist/brackets-viewer.min.css"
+  />
   <style>
     body {
       background-color: #0f172a;
@@ -178,6 +182,30 @@
         });
       })
       .catch(err => console.error("Error al cargar datos:", err));
+    
+    fetch("datos-torneo.json")
+      .then((res) => res.json())
+      .then((data) => {
+        // Crear instancia del viewer
+        const viewer = new BracketsViewer({
+          selector: "#brackets",
+          showSlotsOrigin: false,
+          separatedChildCountLabel: false,
+          participantOriginPlacement: "none",
+        });
+
+        // Cargar datos del torneo
+        viewer.render({
+          stages: data.stage || data.stages || [],
+          matches: data.match || data.matches || [],
+          matchGames: data.match_game || data.matchGames || [],
+          participants: data.participant || data.participants || [],
+        });
+
+        console.log("✅ Torneo renderizado correctamente");
+      })
+      .catch((err) => console.error("❌ Error al cargar datos del torneo:", err));
   </script>
 </body>
 </html>
+
