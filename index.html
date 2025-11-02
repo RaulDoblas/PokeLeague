@@ -5,90 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PokeLeague - Bracket real</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <!-- Estilos del viewer -->
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/gh/Drarig29/brackets-viewer.js@master/dist/brackets-viewer.min.css"
   />
+
   <style>
     body {
       background-color: #0f172a;
       color: #fff;
     }
-
-    .bracket {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-      margin-top: 2rem;
-      overflow-x: auto;
-      padding-bottom: 3rem;
-    }
-
-    .round {
-      display: grid;
-      align-items: center;
-      justify-items: center;
-      gap: 1rem;
-    }
-
-    .round-title {
-      font-weight: bold;
+    h2 {
       color: #facc15;
-      text-align: center;
-      margin-bottom: 0.5rem;
     }
-
-    .match {
-      background-color: #1e293b;
-      padding: 0.75rem 1rem;
-      border-radius: 0.5rem;
-      width: 140px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-      position: relative;
-      font-size: 0.9rem;
-    }
-
-    /* líneas entre rondas */
-    .match::after {
-      content: "";
-      position: absolute;
-      right: -1rem;
-      top: 50%;
-      width: 1rem;
-      height: 2px;
-      background: #64748b;
-    }
-
-    .connector {
-      position: absolute;
-      right: -1rem;
-      width: 1rem;
-      border-right: 2px solid #64748b;
-    }
-
-    .connector.up {
-      top: 0;
-      height: 50%;
-      border-top: 2px solid #64748b;
-    }
-
-    .connector.down {
-      bottom: 0;
-      height: 50%;
-      border-bottom: 2px solid #64748b;
-    }
-
-    @media (max-width: 768px) {
-      .match {
-        width: 100px;
-        font-size: 0.8rem;
-      }
+    #brackets {
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+      padding: 2rem 0;
     }
   </style>
 </head>
 <body>
 
+  <!-- Navbar -->
   <nav class="bg-gray-800 p-4 flex justify-center gap-6 text-yellow-400 font-bold">
     <a href="index.html" class="underline">Liga y Torneo</a>
     <a href="jornadas.html">Jornadas</a>
@@ -119,74 +61,36 @@
     <!-- Torneo -->
     <section class="mt-12">
       <h2 class="text-2xl font-semibold mb-4 text-center">Torneo Final</h2>
-      <div id="brackets" class="bracket"></div>
+      <div id="brackets"></div>
     </section>
   </main>
 
+  <!-- Librería viewer -->
+  <script src="https://cdn.jsdelivr.net/gh/Drarig29/brackets-viewer.js@master/dist/brackets-viewer.min.js"></script>
+
   <script>
-    fetch("datos.json")
+    // Cargar tabla liga si la tienes en el JSON
+    fetch("datos-torneo.json")
       .then(res => res.json())
       .then(data => {
-        // === LIGA ===
-        const tabla = document.getElementById("tabla-liga");
-        const ligaOrdenada = (data.liga || []).slice().sort((a, b) => b.victorias - a.victorias);
-        ligaOrdenada.forEach(entrenador => {
-          const row = document.createElement("tr");
-          row.className = "border-b border-gray-700 hover:bg-gray-800";
-          row.innerHTML = `
-            <td class="py-2 px-4">${entrenador.nombre}</td>
-            <td class="py-2 px-4">${entrenador.victorias}</td>
-            <td class="py-2 px-4">${entrenador.derrotas}</td>
-          `;
-          tabla.appendChild(row);
-        });
+        // Si tu JSON tiene datos de liga
+        if (data.liga) {
+          const tabla = document.getElementById("tabla-liga");
+          data.liga
+            .sort((a, b) => b.victorias - a.victorias)
+            .forEach(entrenador => {
+              const row = document.createElement("tr");
+              row.className = "border-b border-gray-700 hover:bg-gray-800";
+              row.innerHTML = `
+                <td class="py-2 px-4">${entrenador.nombre}</td>
+                <td class="py-2 px-4">${entrenador.victorias}</td>
+                <td class="py-2 px-4">${entrenador.derrotas}</td>
+              `;
+              tabla.appendChild(row);
+            });
+        }
 
-        // === TORNEO ===
-        const fases = ["octavos", "cuartos", "semis", "final"];
-        const nombres = {
-          octavos: "Octavos",
-          cuartos: "Cuartos",
-          semis: "Semifinales",
-          final: "Final"
-        };
-
-        const bracketsDiv = document.getElementById("brackets");
-
-        // Definir filas según cantidad de partidos
-        const alturas = { octavos: 8, cuartos: 4, semis: 2, final: 1 };
-
-        fases.forEach(fase => {
-          const emparejamientos = data.torneo?.[fase];
-          if (!Array.isArray(emparejamientos)) return;
-
-          const columna = document.createElement("div");
-          columna.className = "round";
-          columna.style.gridTemplateRows = `repeat(${alturas[fase] * 2}, 1fr)`;
-          columna.innerHTML = `<div class="round-title">${nombres[fase]}</div>`;
-
-          const espacio = alturas[fase];
-          emparejamientos.forEach((matchData, i) => {
-            const [p1, p2] = matchData;
-            const match = document.createElement("div");
-            match.className = "match";
-            match.style.gridRow = `${i * (espacio * 2) + 1} / span ${espacio}`;
-            match.innerHTML = `
-              <div>${p1}</div>
-              <div class="text-yellow-300">vs</div>
-              <div>${p2}</div>
-            `;
-            columna.appendChild(match);
-          });
-
-          bracketsDiv.appendChild(columna);
-        });
-      })
-      .catch(err => console.error("Error al cargar datos:", err));
-    
-    fetch("datos-torneo.json")
-      .then((res) => res.json())
-      .then((data) => {
-        // Crear instancia del viewer
+        // Renderizar bracket
         const viewer = new BracketsViewer({
           selector: "#brackets",
           showSlotsOrigin: false,
@@ -194,7 +98,6 @@
           participantOriginPlacement: "none",
         });
 
-        // Cargar datos del torneo
         viewer.render({
           stages: data.stage || data.stages || [],
           matches: data.match || data.matches || [],
@@ -204,8 +107,7 @@
 
         console.log("✅ Torneo renderizado correctamente");
       })
-      .catch((err) => console.error("❌ Error al cargar datos del torneo:", err));
+      .catch(err => console.error("❌ Error al cargar datos del torneo:", err));
   </script>
 </body>
 </html>
-
