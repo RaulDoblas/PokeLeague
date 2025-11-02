@@ -8,7 +8,7 @@
   <style>
     .bracket {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 1rem;
       margin-top: 2rem;
     }
@@ -28,6 +28,11 @@
       align-items: center;
       justify-content: center;
       box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .match:hover {
+      background-color: #374151;
+      transform: scale(1.02);
     }
     .round-title {
       font-weight: bold;
@@ -87,14 +92,9 @@
     fetch("datos.json")
       .then(res => res.json())
       .then(data => {
-        // Liga
+        // === LIGA ===
         const tabla = document.getElementById("tabla-liga");
-        const ligaOrdenada = (data.liga || [])
-          .slice()
-          .sort((a, b) => {    
-              return b.victorias - a.victorias;
-          });
-
+        const ligaOrdenada = (data.liga || []).slice().sort((a, b) => b.victorias - a.victorias);
 
         ligaOrdenada.forEach(entrenador => {
           const row = document.createElement("tr");
@@ -107,14 +107,17 @@
           tabla.appendChild(row);
         });
 
-        // Torneo brackets
-        const fases = [ "semis", "final"];
+        // === TORNEO ===
+        const fases = ["octavos", "cuartos", "semis", "final"];
         const nombres = {
+          octavos: "Octavos",
+          cuartos: "Cuartos",
           semis: "Semifinales",
           final: "Final"
         };
 
         const bracketsDiv = document.getElementById("brackets");
+
         fases.forEach(fase => {
           const emparejamientos = data.torneo?.[fase];
           if (!Array.isArray(emparejamientos)) return;
@@ -126,7 +129,22 @@
           emparejamientos.forEach(([p1, p2]) => {
             const match = document.createElement("div");
             match.className = "match";
-            match.innerHTML = `<span>${p1} vs ${p2}</span>`;
+
+            // Mostrar ganador automático si tiene formato "Ganador X-Y"
+            let ganador = null;
+            const regex = /Ganador\s+([0-9\-()]+)/i;
+            if (regex.test(p1) || regex.test(p2)) {
+              ganador = "🏅 Pendiente";
+            }
+
+            match.innerHTML = `
+              <div>
+                <div>${p1}</div>
+                <div class="text-yellow-300">vs</div>
+                <div>${p2}</div>
+                ${ganador ? `<div class="text-green-400 mt-2">${ganador}</div>` : ""}
+              </div>
+            `;
             columna.appendChild(match);
           });
 
@@ -137,4 +155,3 @@
   </script>
 </body>
 </html>
-
