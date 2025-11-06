@@ -199,19 +199,19 @@
   ],
   "torneo": {
     "octavos": [
-      ["6", "7"],
-      ["5", "8"]
+      ["Toni", "Angel"],
+      ["Rau", "Raul"]
     ],
     "cuartos": [
-      ["4", "Ganador 6-7"],
-      ["3", "Ganador 5-8"]
+      ["Felipe", "Ganador Toni-Angel"],
+      ["Antonio", "Ganador Rau-Raul"]
     ],
     "semis": [
-      ["2", "Ganador 4-vs-(6-7)"],
-      ["1", "Ganador 3-vs-(5-8)"]
+      ["Nieto", "Ganador Felipe-vs-(Toni-Angel)"],
+      ["Javi", "Ganador Antonio-vs-(Rau-Raul)"]
     ],
     "final": [
-      ["Ganador 1-vs-(3-5-8)", "Ganador 2-vs-(4-6-7)"]
+      ["Ganador Javi-vs-(Antonio-Rau-Raul)", "Ganador Nieto-vs-(Felipe-Toni-Angel)"]
     ]
   },
   "equipos": [
